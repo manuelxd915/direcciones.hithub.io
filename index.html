@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Subredes</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Subredes</h1>
+        <h2>CONALEP Juárez III - Paradigmas de Programación</h2>
+        <h3>Grupo 318</h3>
+    </header>
+
+    <section id="formulario">
+        <form id="networkForm">
+            <label for="networkIp">IP de red:</label>
+            <input type="text" id="networkIp" placeholder="Ej: 192.168.1.0" required>
+
+            <label for="subnetMask">Máscara:</label>
+            <input type="text" id="subnetMask" placeholder="Ej: 255.255.255.0" required>
+
+            <label for="subnetCount">Cantidad de subredes:</label>
+            <input type="number" id="subnetCount" placeholder="Ej: 4" required>
+
+            <button type="button" onclick="calculateSubnets()"> Calcular</button>
+        </form>
+    </section>
+
+    <section id="resultados">
+        <h3>Resultados</h3>
+        <table>
+            <tr>
+                <th>Primera IP Utilizable</th>
+                <td id="firstIp"></td>
+            </tr>
+            <tr>
+                <th>Última IP Utilizable</th>
+                <td id="lastIp"></td>
+            </tr>
+            <tr>
+                <th>Máscara de Subred</th>
+                <td id="subnetMaskResult"></td>
+            </tr>
+            <tr>
+                <th>Broadcast</th>
+                <td id="broadcast"></td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <img src="https://th.bing.com/th/id/OIP.JLGfHXdb_m2W3kiCXQOTOgHaFl?w=237&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Logo Representativo" id="representativeImage">
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
